@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/script.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        .project-header {
+            padding: 120px 20px 30px;
+            background: linear-gradient(to right, #3e3e3e, #1c1c1c);
+            color: #fff;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        .gallery-section {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #111;
+            color: #eee;
+        }
+
+        .back-link {
+            color: #66ccff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Daniel Filatov</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html#hero">Home</a></li>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="project-header">
+        <h1>Photo Gallery</h1>
+    </section>
+
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 515.png" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 514.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-1.png" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-8.png" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 513.png" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-7.png" alt="Gallery Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-3.png" alt="Gallery Image 7">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 516.png" alt="Gallery Image 8">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506.png" alt="Gallery Image 9">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-2.png" alt="Gallery Image 10">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-6.png" alt="Gallery Image 11">
+            </div>
+            <div class="gallery-item">
+                <img src="../../images/Rectangle 506-9.png" alt="Gallery Image 11">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="../../index.html" class="back-link">← Back to Home</a>
+        </div>
+    </footer>
+</body>
+
+</html>

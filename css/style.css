@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #2196f3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.main-header {
+    background: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2196f3;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+.hero-section {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+
+.about-section {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2196f3;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    min-width: 260px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.btn {
+    background: #2196f3;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #1769aa;
+}
+
+
+.projects-section {
+    padding: 4rem 2rem;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+}
+
+
+.contact-section {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-section textarea {
+    min-height: 120px;
+}
+
+.contact-section button {
+    background: #2196f3;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #1769aa;
+}
+
+
+footer {
+    padding: 2rem;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.top-bar {
+    background-color: white;
+    border-bottom: 3px solid #00d1d1;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.profile-img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-banner {
+    background: #99e5ea;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-subtitle {
+    max-width: 600px;
+    margin: auto;
+    color: #555;
+}
+
+.btn-outline {
+    border: 2px solid #00d1d1;
+    color: #00d1d1;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-section {
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #c2185b;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 2px solid #00cfff;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #2196f3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+
+.project-header {
+    padding-top: 100px;
+    background: #a0e9ef;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.project-header h1 {
+    font-size: 36px;
+}
+
+
+.consultation-section {
+    background: linear-gradient(135deg, #e700ff, #a300d1, #7f00b2);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.consultation-container {
+    max-width: 500px;
+    background: #222;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.form-box h2 {
+    margin-bottom: 10px;
+}
+
+.form-box p {
+    margin-bottom: 20px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: hotpink;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-box button:hover {
+    background: #d80080;
+}
+
+
+
+
+
+
+footer {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.back-home {
+    text-decoration: none;
+    color: #00cfff;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-header h1 {
+        font-size: 28px;
+    }
+
+    .consultation-container {
+        width: 100%;
+    }
+}
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+.navbar {
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #00cfff;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #2196f3;
+}
+
+
+.hero-section.project-hero {
+    background: #a0e9ef;
+    padding: 140px 20px 60px;
+    text-align: center;
+}
+
+.hero-section .project-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section .project-subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+
+.form-section {
+    background: linear-gradient(135deg, #e700ff, #a300d1, #7f00b2);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 480px;
+    background-color: #222;
+    padding: 40px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.form-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-box input {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.form-box button {
+    padding: 14px;
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-box button:hover {
+    background-color: #c2185b;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #00cfff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-section .project-title {
+        font-size: 2rem;
+    }
+
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+.newsletter-section.enhanced-bg {
+    background: url('../images/travel-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.newsletter-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 60px 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    color: white;
+}
+
+.newsletter-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-content input[type="email"] {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.newsletter-content button {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    background-color: #00cfff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-content button:hover {
+    background-color: #00a9cc;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .newsletter-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-overlay {
+        padding: 40px 20px;
+    }
+}

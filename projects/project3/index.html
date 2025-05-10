@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Coupon Signup</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/script.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .project-header {
+            text-align: center;
+            padding: 120px 20px 20px;
+            background: linear-gradient(to right, #4b2c72, #3e396b);
+            color: white;
+        }
+
+        .project-header h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .project-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .coffee-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+        }
+
+        .coffee-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 960px;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .coffee-image {
+            flex: 1 1 50%;
+        }
+
+        .coffee-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .coffee-form {
+            flex: 1 1 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(to bottom, #fff, #f0f0f0);
+        }
+
+        .coffee-form h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333;
+            text-align: center;
+        }
+
+        .coffee-form input,
+        .coffee-form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 14px 16px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .coffee-form input:focus {
+            border-color: #7a4ebf;
+            outline: none;
+            box-shadow: 0 0 5px rgba(122, 78, 191, 0.5);
+        }
+
+        .coffee-form button {
+            background-color: #1c1c52;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .coffee-form button:hover {
+            background-color: #000046;
+            transform: scale(1.02);
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: white;
+        }
+
+        .back-link {
+            color: #66ccff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .coffee-container {
+                flex-direction: column;
+            }
+
+            .coffee-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Daniel Filatov</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html#hero">Home</a></li>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="project-header">
+        <h1>Coffee Coupon Signup</h1>
+        <p class="project-subtitle">Start your day with a free cup of joy!</p>
+    </section>
+
+
+    <section class="coffee-section">
+        <div class="coffee-container">
+            <div class="coffee-image">
+                <img src="../../images/Coffee.png" alt="Cup of coffee">
+            </div>
+            <div class="coffee-form">
+                <h2>Claim Your Free Coffee</h2>
+                <form id="coffeeForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <a href="../../index.html" class="back-link">← Back to Home</a>
+        </div>
+    </footer>
+</body>
+
+</html>
